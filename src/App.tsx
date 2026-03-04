@@ -14,7 +14,8 @@ function App() {
     <div className="min-h-screen bg-stone-50 font-sans text-stone-800 selection:bg-emerald-200">
       {/* Header / Hero */}
       <header className="pt-12 pb-20 px-6 lg:pt-20 lg:pb-32 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
+        {/* TEXTO AGORA VEM PRIMEIRO NA ORDEM */}
+        <div className="space-y-8 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm">
             <Star className="w-4 h-4 fill-emerald-800" />
             <span>Mais de 10.000 leitores satisfeitos</span>
@@ -40,7 +41,9 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="order-1 lg:order-2 flex justify-center py-8">
+        
+        {/* LIVRO VEM DEPOIS DO TEXTO */}
+        <div className="flex justify-center py-8">
           <BookMockup />
         </div>
       </header>
@@ -193,9 +196,9 @@ function App() {
                   </li>
                 </ul>
 
+                {/* BOTÃO COM LINK DA KIWIFY */}
                 <a 
-                  href="#" 
-                  onClick={(e) => { e.preventDefault(); alert('Redirecionando para o checkout seguro...'); }}
+                  href="https://pay.kiwify.com.br/56C4osh" 
                   className="block w-full py-6 bg-rose-600 hover:bg-rose-700 text-white text-2xl font-bold rounded-2xl shadow-xl shadow-rose-600/30 transition-all transform hover:-translate-y-1 text-center"
                 >
                   COMPRAR AGORA POR R$ 9,00
@@ -252,12 +255,8 @@ function App() {
 
 const BookMockup = () => (
   <div className="relative w-64 h-96 sm:w-80 sm:h-[480px] mx-auto transform transition-transform hover:scale-105 duration-700">
-    {/* Shadow */}
     <div className="absolute inset-0 bg-black/40 rounded-r-2xl rounded-l-sm blur-2xl transform translate-y-8 translate-x-8"></div>
-    
-    {/* Cover */}
     <div className="relative w-full h-full bg-stone-200 rounded-r-2xl rounded-l-sm shadow-2xl overflow-hidden border-l-[12px] border-stone-800 flex flex-col items-center text-center z-10">
-      {/* Background Image - The actual cover */}
       <img 
         src="./capa.png" 
         alt="Capa do Livro Sempre Jovem" 
@@ -266,11 +265,7 @@ const BookMockup = () => (
           e.currentTarget.src = "https://images.unsplash.com/photo-1558522195-e1201b090344?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
         }}
       />
-      
-      {/* Book Spine Highlight */}
       <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-white/30 to-transparent z-20 pointer-events-none"></div>
-      
-      {/* Book Page Edges (Right side) */}
       <div className="absolute right-0 top-3 bottom-3 w-1.5 bg-gradient-to-l from-white/50 to-transparent rounded-r-sm z-20 pointer-events-none"></div>
     </div>
   </div>
