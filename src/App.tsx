@@ -13,20 +13,34 @@ function App() {
   return (
     <div className="min-h-screen bg-stone-50 font-sans text-stone-800 selection:bg-emerald-200">
       {/* Header / Hero */}
-      <header className="pt-12 pb-20 px-6 lg:pt-20 lg:pb-32 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* TEXTO AGORA VEM PRIMEIRO NA ORDEM */}
-        <div className="space-y-8 text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm">
-            <Star className="w-4 h-4 fill-emerald-800" />
-            <span>Mais de 10.000 leitores satisfeitos</span>
+      <header className="pt-12 pb-20 px-6 lg:pt-20 lg:pb-32 max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+        
+        {/* Coluna Principal (Texto e Imagem Mobile) */}
+        <div className="flex-1 space-y-6 lg:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
+          
+          {/* 1. TÍTULO (Sempre no topo) */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm">
+              <Star className="w-4 h-4 fill-emerald-800" />
+              <span>Mais de 10.000 leitores satisfeitos</span>
+            </div>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-stone-900 leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
+              Descubra o Segredo para uma Vida Longa, Saudável e Cheia de Energia
+            </h1>
           </div>
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-stone-900 leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
-            Descubra o Segredo para uma Vida Longa, Saudável e Cheia de Energia
-          </h1>
-          <p className="text-lg lg:text-xl text-stone-600 leading-relaxed">
+
+          {/* 2. IMAGEM DO LIVRO (Aparece AQUI só no celular) */}
+          <div className="block lg:hidden w-full py-6">
+            <BookMockup />
+          </div>
+
+          {/* 3. SUBTÍTULO (Abaixo da imagem no celular) */}
+          <p className="text-lg lg:text-xl text-stone-600 leading-relaxed max-w-2xl">
             O guia definitivo e prático para transformar sua saúde e recuperar a vitalidade depois dos 60 anos, sem dietas malucas ou exercícios exaustivos.
           </p>
-          <div className="pt-4">
+
+          {/* 4. BOTÕES */}
+          <div className="pt-2 lg:pt-4 w-full sm:w-auto">
             <a 
               href="#oferta" 
               onClick={scrollToOffer}
@@ -42,8 +56,8 @@ function App() {
           </div>
         </div>
         
-        {/* LIVRO VEM DEPOIS DO TEXTO */}
-        <div className="flex justify-center py-8">
+        {/* Coluna Direita (Imagem apenas no Computador/Tablet) */}
+        <div className="hidden lg:flex flex-1 justify-center py-8">
           <BookMockup />
         </div>
       </header>
