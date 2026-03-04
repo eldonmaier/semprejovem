@@ -13,34 +13,36 @@ function App() {
   return (
     <div className="min-h-screen bg-stone-50 font-sans text-stone-800 selection:bg-emerald-200">
       {/* Header / Hero */}
-      <header className="pt-12 pb-20 px-6 lg:pt-20 lg:pb-32 max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+      <header className="pt-8 pb-16 px-6 lg:pt-20 lg:pb-32 max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
         
         {/* Coluna Principal (Texto e Imagem Mobile) */}
-        <div className="flex-1 space-y-6 lg:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
+        <div className="flex-1 space-y-4 lg:space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start w-full">
           
-          {/* 1. TÍTULO (Sempre no topo) */}
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm">
+          {/* 1. TÍTULO E BADGE */}
+          <div className="space-y-4 lg:space-y-6">
+            {/* BADGE - Oculto no celular (hidden), visível no PC (lg:inline-flex) */}
+            <div className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 font-semibold text-sm">
               <Star className="w-4 h-4 fill-emerald-800" />
               <span>Mais de 10.000 leitores satisfeitos</span>
             </div>
+            
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-stone-900 leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
               Descubra o Segredo para uma Vida Longa, Saudável e Cheia de Energia
             </h1>
           </div>
 
           {/* 2. IMAGEM DO LIVRO (Aparece AQUI só no celular) */}
-          <div className="block lg:hidden w-full py-6">
+          <div className="block lg:hidden w-full py-4">
             <BookMockup />
           </div>
 
-          {/* 3. SUBTÍTULO (Abaixo da imagem no celular) */}
-          <p className="text-lg lg:text-xl text-stone-600 leading-relaxed max-w-2xl">
+          {/* 3. SUBTÍTULO - Oculto no celular (hidden), visível no PC (lg:block) */}
+          <p className="hidden lg:block text-lg lg:text-xl text-stone-600 leading-relaxed max-w-2xl">
             O guia definitivo e prático para transformar sua saúde e recuperar a vitalidade depois dos 60 anos, sem dietas malucas ou exercícios exaustivos.
           </p>
 
           {/* 4. BOTÕES */}
-          <div className="pt-2 lg:pt-4 w-full sm:w-auto">
+          <div className="pt-2 w-full sm:w-auto">
             <a 
               href="#oferta" 
               onClick={scrollToOffer}
@@ -210,7 +212,6 @@ function App() {
                   </li>
                 </ul>
 
-                {/* BOTÃO COM LINK DA KIWIFY */}
                 <a 
                   href="https://pay.kiwify.com.br/56C4osh" 
                   className="block w-full py-6 bg-rose-600 hover:bg-rose-700 text-white text-2xl font-bold rounded-2xl shadow-xl shadow-rose-600/30 transition-all transform hover:-translate-y-1 text-center"
