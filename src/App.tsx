@@ -92,7 +92,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <img 
-              src="/healthy.jpg" 
+              src="./healthy.jpg" 
               alt="Casal de idosos felizes e saudáveis" 
               className="rounded-3xl shadow-2xl border-4 border-emerald-800"
               referrerPolicy="no-referrer"
@@ -128,19 +128,19 @@ function App() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard 
-              image="/elder 1.jpg"
+              image="./elder 1.jpg"
               name="Maria Helena, 64 anos"
               text="Eu achava que as dores nas costas e o cansaço eram 'coisa da idade'. Depois que apliquei as dicas simples do livro, me sinto 10 anos mais jovem. Recomendo para todas as minhas amigas!"
               gender="female"
             />
             <TestimonialCard 
-              image="/elder 2.jpg"
+              image="./elder 2.jpg"
               name="Antônio Carlos, 71 anos"
               text="Leitura muito fácil e direta, com letras boas de ler. Comecei a fazer a rotina matinal e minha disposição mudou completamente. Até voltei a cuidar do meu jardim com alegria."
               gender="male"
             />
             <TestimonialCard 
-              image="/elder 3.jpg"
+              image="./elder 3.jpg"
               name="Sônia Regina, 68 anos"
               text="O melhor investimento que fiz na minha saúde este ano. Por esse preço, achei que seria algo muito simples, mas o conteúdo é riquíssimo, prático e mudou minha rotina."
               gender="female"
@@ -259,7 +259,7 @@ const BookMockup = () => (
     <div className="relative w-full h-full bg-stone-200 rounded-r-2xl rounded-l-sm shadow-2xl overflow-hidden border-l-[12px] border-stone-800 flex flex-col items-center text-center z-10">
       {/* Background Image - The actual cover */}
       <img 
-        src="/capa.png" 
+        src="./capa.png" 
         alt="Capa do Livro Sempre Jovem" 
         className="absolute inset-0 w-full h-full object-cover z-10"
         onError={(e) => {
@@ -281,7 +281,7 @@ const BookMockupSmall = () => (
     <div className="absolute inset-0 bg-black/20 rounded-r-xl rounded-l-sm blur-lg transform translate-y-4 translate-x-4"></div>
     <div className="relative w-full h-full bg-stone-200 rounded-r-xl rounded-l-sm shadow-xl overflow-hidden border-l-8 border-stone-800 flex flex-col items-center text-center z-10">
       <img 
-        src="/capa.png" 
+        src="./capa.png" 
         alt="Capa do Livro Sempre Jovem" 
         className="absolute inset-0 w-full h-full object-cover z-10"
         onError={(e) => {
