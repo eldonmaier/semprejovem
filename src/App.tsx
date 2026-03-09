@@ -190,7 +190,7 @@ function App() {
                   <p className="text-xl text-stone-500 line-through mb-1">De R$ 47,00 por apenas:</p>
                   <div className="flex items-baseline justify-center md:justify-start gap-2 text-emerald-700">
                     <span className="text-4xl font-bold">R$</span>
-                    <span className="text-8xl font-black tracking-tighter">9,00</span>
+                    <span className="text-8xl font-black tracking-tighter">24,90</span>
                   </div>
                   <p className="text-base text-stone-600 mt-2 font-medium bg-emerald-100 inline-block px-3 py-1 rounded-full">
                     Pagamento único. Acesso vitalício.
@@ -213,10 +213,10 @@ function App() {
                 </ul>
 
                 <a 
-                  href="https://pay.kiwify.com.br/56C4osh" 
+                  href="https://pay.kiwify.com.br/Xr8nDU5" 
                   className="block w-full py-6 bg-rose-600 hover:bg-rose-700 text-white text-2xl font-bold rounded-2xl shadow-xl shadow-rose-600/30 transition-all transform hover:-translate-y-1 text-center"
                 >
-                  COMPRAR AGORA POR R$ 9,00
+                  COMPRAR AGORA POR R$ 24,90
                 </a>
                 <div className="flex items-center justify-center gap-4 text-stone-500">
                   <ShieldCheck className="w-6 h-6 text-emerald-600" />
@@ -249,7 +249,7 @@ function App() {
             />
             <FaqItem 
               question="Tem garantia? E se eu não gostar?" 
-              answer="Sim! Você tem 7 dias de garantia incondicional. Se você ler e achar que o conteúdo não ajudou em nada, basta enviar um único e-mail para nós e devolveremos seus R$ 9,00 integralmente. Sem perguntas e sem burocracia." 
+              answer="Sim! Você tem 7 dias de garantia incondicional. Se você ler e achar que o conteúdo não ajudou em nada, basta enviar um único e-mail para nós e devolveremos seus R$ 24,90 integralmente. Sem perguntas e sem burocracia." 
             />
           </div>
         </div>
